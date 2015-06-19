@@ -14,7 +14,7 @@ angular.module('directoryApp', [])
             age: 26
         }, {
             name: 'Ben',
-            age: 26
+            age: 23
         }, {
             name: 'Lam',
             age: 26

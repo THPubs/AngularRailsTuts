@@ -1,7 +1,7 @@
 <input type="text" ng-model="search">
 <ul>
-    <li ng-repeat="item in dirList.list | filter:search">
-        <strong>{{item.name}}</strong> - {{item.age}}
+    <li ng-repeat="item in dirList.list | filter:search | orderBy:'age' | limitTo:2"  class="person-{{item.name | lowercase}}">
+        <strong>{{item.name}}</strong> - {{item.age | currency:"Rs. ":0}}
     </li>
 </ul>
 <form ng-submit="dirList.addPerson()">
