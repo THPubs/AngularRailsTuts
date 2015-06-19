@@ -1,9 +1,10 @@
 <input type="text" ng-model="search">
-<ul>
-    <li ng-repeat="item in dirList.list | filter:search | orderBy:'age' | limitTo:2"  class="person-{{item.name | lowercase}}">
-        <strong>{{item.name}}</strong> - {{item.age | currency:"Rs. ":0}}
+<ul ng-class="{'hidden': !dirList.toggle}">
+    <li ng-repeat="item in dirList.list | filter:search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'">
+        <strong>{{item.name}}</strong> - {{item.age}}
     </li>
 </ul>
+<button ng-click="dirList.toggle = true" type="button" name="button">Show Names</button>
 <form ng-submit="dirList.addPerson()">
     <input type="text" placeholder="Name" ng-model="dirList.name">
     <input type="number" placeholder="Age" ng-model="dirList.age">
