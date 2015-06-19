@@ -1,7 +1,7 @@
 <input type="text" ng-model="search">
 <ul ng-class="{'hidden': !dirList.toggle}">
     <li ng-repeat="item in dirList.list | filter:search" ng-class="item.age > 29 ? 'over-thirty' : 'under-thirty'">
-        <strong>{{item.name}}</strong> - {{item.age}}
+        <img ng-src="{{item.img}}" alt="{{item.name | lowercase}}" /> <strong>{{item.name}}</strong> - {{item.age}}
     </li>
 </ul>
 <button ng-hide="dirList.toggle" ng-click="dirList.toggle = true" type="button" name="button">Show Names</button>
