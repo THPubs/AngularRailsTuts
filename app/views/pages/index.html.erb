@@ -4,7 +4,8 @@
         <strong>{{item.name}}</strong> - {{item.age}}
     </li>
 </ul>
-<button ng-click="dirList.toggle = true" type="button" name="button">Show Names</button>
+<button ng-hide="dirList.toggle" ng-click="dirList.toggle = true" type="button" name="button">Show Names</button>
+<button ng-hide="!dirList.toggle" ng-click="dirList.toggle = false" type="button" name="button">Hide Names</button>
 <form ng-submit="dirList.addPerson()">
     <input type="text" placeholder="Name" ng-model="dirList.name">
     <input type="number" placeholder="Age" ng-model="dirList.age">
