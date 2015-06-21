@@ -3,6 +3,7 @@
     "name": "bower-rails generated lib assets",
     "dependencies": {
       "angular": "v1.4.1",
+      "angular-animate": "v1.4.1",
       "lodash": "v3.9.3"
     }
   },

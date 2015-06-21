@@ -1,4 +1,4 @@
-angular.module('directoryApp', [])
+angular.module('directoryApp', ['ngAnimate'])
     .controller('directoryController', function() {
 
         var dirList = this;
