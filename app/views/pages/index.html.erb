@@ -1,7 +1,6 @@
 <input type="text" ng-model="search">
 <ul ng-class="{'hidden': !dirList.toggle}">
-    <li ng-repeat="item in dirList.list | filter:search">
-        <ng-include src="'person.html'"></ng-include>
+    <li ng-repeat="item in dirList.list | filter:search" ng-include="'<%= asset_url('person.html') %>'">
     </li>
 </ul>
 <button ng-hide="dirList.toggle" ng-click="dirList.toggle = true" type="button" name="button">Show Names</button>

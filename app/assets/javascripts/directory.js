@@ -1,4 +1,4 @@
-angular.module('directoryApp', ['templates'])
+angular.module('directoryApp', [])
     .controller('directoryController', function() {
 
         var dirList = this;
