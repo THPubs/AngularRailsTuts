@@ -9,30 +9,39 @@
 .hidden {
     display: none;
 }
-ul{
+ul {
     list-style: none;
 }
-li{
+li {
     display: flex;
     margin-bottom: 10px;
-
-    span{
+    span {
         display: inline-block;
         line-height: 50px;
     }
-
-    img{
+    img {
         margin-right: 10px;
         border-radius: 50%;
         width: 50px;
         height: 50px;
     }
 }
-#twitter{
+#twitter {
     fill: #55acee;
 }
-#twitter-cont{
-      svg{
-          width: 21px;
-      }
+#twitter-cont {
+    svg {
+        width: 21px;
+    }
+}
+li.ng-enter {
+    animation: fadeIn 0.3s linear;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
