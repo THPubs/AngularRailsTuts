@@ -15,4 +15,5 @@
 //= require angular
 //= require angular-rails-templates
 //= require lodash
+//= require_tree ../templates
 //= require_tree .

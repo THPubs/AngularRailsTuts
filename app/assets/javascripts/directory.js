@@ -1,9 +1,11 @@
-angular.module('directoryApp', [])
+angular.module('directoryApp', ['templates'])
     .controller('directoryController', function() {
 
         var dirList = this;
 
-        dirList.toggle = false;
+        dirList.toggle = true;
+
+        dirList.templateUrl = 'person.html';
 
         dirList.list = [{
             name: 'Pubudu',
